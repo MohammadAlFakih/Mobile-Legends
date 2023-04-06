@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
+    <div class="beforeloading" id="before">
+        <div class="circle">
+        </div>
+        <div class="counter">
+            Few seconds to load images!!
+        </div>
+    </div>
+    <div class="afterloading">
     <header>
         <div>
         <h1>Mobile Legends</h1><img src="logo.png">
@@ -146,9 +154,16 @@
         <div><iframe src="hoverindex.html"  scrolling="no"></iframe></div>
         <div>&copy; 2023 Mobile Legends. All rights are reserved</div>
     </footer>
+</div>
     <script>
-        setTimeout(()=>alert("Don't forget to hover follow image at the end"),20000);
-        setTimeout(()=>alert("Try to buy a hero to see the effect"),8000);
+
+            setTimeout(()=>{
+                    document.getElementById("before").style.display="none";
+                    document.getElementsByClassName("afterloading")[0].style.display="flex";}
+            ,5000);
+        
+        setTimeout(()=>alert("Don't forget to hover follow image at the end"),40000);
+        setTimeout(()=>alert("Try to buy a hero to see the effect"),25000);
         function f(i){
             document.getElementById("strt").style.display="none";
             var x=document.getElementsByClassName("type");
